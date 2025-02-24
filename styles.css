@@ -32,14 +32,38 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #636e72 100%);
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
     min-height: 100vh;
     position: relative;
+    padding-top: 100px; /* Account for fixed navbar */
 }
 
 .highlight {
     color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--secondary-color);
+    transform: scaleX(0.8);
+    opacity: 0.8;
+}
+
+.highlight:hover {
+    color: #74b9ff;
+    transition: color 0.3s ease;
 }
 
 .hero-buttons .btn {
@@ -69,11 +93,20 @@ body {
 }
 
 .skill-tag {
-    background: var(--light-bg);
+    background: white;
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 500;
+    margin: 0.3rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* Project Cards */
@@ -82,11 +115,12 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
 .project-image img {
@@ -122,6 +156,68 @@ body {
     color: white;
 }
 
+/* Typing animation text */
+.typing-text {
+    font-size: 1.2rem;
+    color: #dfe6e9;
+}
+
+/* Skills Container */
+.skills-container {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+.skill-category h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Focus Areas */
+.focus-areas {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.focus-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.focus-item:hover {
+    transform: translateY(-5px);
+}
+
+.focus-item i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.focus-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.focus-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero h1 {
@@ -130,6 +226,19 @@ body {
     
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .skills-container {
+        padding: 1rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .focus-item {
+        padding: 1rem;
     }
 }
 
@@ -184,4 +293,4 @@ body {
 
 .breadcrumb a:hover {
     text-decoration: underline;
-}
+} 
