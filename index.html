@@ -3,92 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Nurin Ewani - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">Nurin Ewani</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nurin Ewani</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
-            <p class="tagline">Web Developer | Designer | Creative Thinker</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-4">Hello, I'm <span class="highlight">Nurin Ewani</span></h1>
+                    <p class="lead mb-4">Software Developer | System Engineer | Full-Stack Developer</p>
+                    <div class="typing-text mb-4">I build <span class="typed-words"></span></div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary me-3">View Projects</a>
+                        <a href="#contact" class="btn btn-outline-light">Get In Touch</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Write a compelling introduction about yourself here. Share your passion, experience, and what drives you.</p>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <ul class="skill-list">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <!-- Add more skills -->
-                    </ul>
+    <section id="about" class="about py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                    <p class="lead">I'm a passionate software developer with expertise in building robust web applications and system solutions. I focus on writing clean, efficient code and developing scalable software solutions.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML5/CSS3</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Frameworks & Libraries</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Technologies</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Development Focus</h3>
+                    <div class="focus-areas">
+                        <div class="focus-item">
+                            <i class="fas fa-code"></i>
+                            <h4>Software Development</h4>
+                            <p>Building scalable applications and maintaining clean code architecture</p>
+                        </div>
+                        <div class="focus-item">
+                            <i class="fas fa-server"></i>
+                            <h4>System Engineering</h4>
+                            <p>Designing and implementing robust system infrastructure</p>
+                        </div>
+                        <div class="focus-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Web Development</h4>
+                            <p>Creating responsive and user-friendly web applications</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/jobrangers.png" alt="Project 1" class="img-fluid">
+    <section id="projects" class="projects py-5">
+        <div class="container">
+            <h2 class="section-title text-center">My Projects</h2>
+            <div class="section-divider"></div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/screenshot_jobrangers.png" alt="Project 1" class="img-fluid">
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Name</h3>
+                            <p>Project description goes here. Explain what you built and the technologies used.</p>
+                            <div class="project-links">
+                                <a href="job-rangers-project.html" class="btn btn-primary btn-sm">View Project</a>
+                                <a href="https://github.com/yourusername/job-rangers" class="btn btn-outline-primary btn-sm">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3>Project Name</h3>
-                <p>Project description goes here. Explain what you built and the technologies used.</p>
-                <div class="project-links">
-                    <a href="job-rangers-project.html" class="btn btn-primary btn-sm">View Project</a>
-                    <a href="https://github.com/yourusername/job-rangers" class="btn btn-outline-primary btn-sm">GitHub</a>
-                </div>
+                <!-- Add more project cards here -->
             </div>
-            <!-- Add more project cards as needed -->
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="social-links">
-                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+    <section id="contact" class="contact py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Get In Touch</h2>
+            <div class="section-divider"></div>
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center">
+                    <div class="social-links">
+                        <a href="https://github.com/nurinewani" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Nurin Ewani. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('.typed-words', {
+            strings: ['robust software solutions.', 'scalable web applications.', 'efficient system architectures.'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+    </script>
 </body>
 </html>
